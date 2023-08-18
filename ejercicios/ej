@@ -1,0 +1,44 @@
+# 0 "ej2tda.cpp"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 0 "<command-line>" 2
+# 1 "ej2tda.cpp"
+
+class Turnador {
+    private:
+    int turnoActual;
+    int maximo;
+    public:
+    Turnador(int max){
+        turnoActual=0;
+        maximo=max;
+    }
+    int getTurnoActual(){
+        return turnoActual;
+    }
+    void siguienteTurno(){
+        if(turnoActual<maximo){
+            turnoActual++;
+        }
+    }
+    int darTurno(){
+        turnoActual++;
+        return turnoActual-1;
+    }
+
+    int turnosRestantes(){
+        return maximo-turnoActual;
+    }
+
+    int turnosRestantes(){
+        return turnoActual-1;
+    }
+
+};
+
+int main(){
+    Turnador turnador(10);
+    turnador.getTurnoActual();
+    return 0;
+}
